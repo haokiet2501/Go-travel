@@ -30,13 +30,20 @@ const swiperHome = new Swiper(".home__swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  }
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: false,
+  //   }
 });
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+const changeHeader = () => {
+  const header = document.getElementById("header");
+  this.scrollY >= 50
+    ? header.classList.add("bg-header")
+    : header.classList.remove("bg-header");
+};
 
+window.addEventListener("scroll", changeHeader);
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 /*=============== SHOW SCROLL UP ===============*/

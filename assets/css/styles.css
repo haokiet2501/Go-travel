@@ -221,6 +221,19 @@ img {
 }
 
 /* Change background header */
+.bg-header {
+  background-color: var(--body-color);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.bg-header :is(.nav__logo, .nav__theme, .nav__toggle) {
+  color: var(--title-color);
+}
+
+.bg-header .nav__logo img {
+  filter: invert(100%);
+}
+
 /* Active link */
 /*=============== HOME ===============*/
 .home {
