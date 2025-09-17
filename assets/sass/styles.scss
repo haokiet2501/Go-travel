@@ -694,11 +694,11 @@ img {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
-  background-color: hls(220, 6%, 80%);
+  background-color: hsl(220, 6%, 80%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hls(220, 6%, 60%);
+  background-color: hsl(220, 6%, 60%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
