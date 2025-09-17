@@ -665,15 +665,17 @@ img {
   }
 }
 /*=============== SCROLL BAR ===============*/
-::-wedkit-scrollbar {
+::-webkit-scrollbar {
   width: .6rem;
-  background-color: hsl(220, 6%, 80%);
+  background-color: hls(220, 6%, 80%);
 }
-::-wedkit-scrollbar-thumb {
-  background-color: hsl(220, 6%, 60%);
+
+::-webkit-scrollbar-thumb {
+  background-color: hls(220, 6%, 60%);
 }
-::-wedkit-scrollbar-thumb:hover {
-  background-color: hsl(220, 6%, 50%);
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hls(220, 6%, 50%);
 }
 /*=============== SCROLL UP ===============*/
 
