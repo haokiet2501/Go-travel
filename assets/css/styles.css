@@ -572,6 +572,19 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-wedkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(220, 6%, 80%);
+}
+
+::-wedkit-scrollbar-thumb {
+  background-color: hsl(220, 6%, 60%);
+}
+
+::-wedkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 6%, 50%);
+}
+
 /*=============== SCROLL UP ===============*/
 /* Show Scroll Up */
 /*=============== BREAKPOINTS ===============*/
