@@ -70,7 +70,25 @@ const scrollUp = () => {
 
 window.addEventListener('scroll', scrollUp)
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
 
+const scrollActive = () => {
+  const scrollDown = window.scrollY
+
+  sections.forEach(cur => {
+    const sectionHeight = cur.offsetHeight,
+          sectionTop = cur.offsetTop - 58,
+          sectionId = cur.getAttribute('id'),
+          sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+    if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+      sectionClass.classList.add('active-link')
+    } else {
+      sectionClass.classList.remove('active-link')
+    }
+  })
+}
+
+window.addEventListener('scroll', scrollActive)
 /*=============== DARK LIGHT THEME ===============*/
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
