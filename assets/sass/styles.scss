@@ -665,7 +665,17 @@ img {
   }
 }
 /*=============== SCROLL BAR ===============*/
-
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: hsl2206%hsl(220, 6%, 80%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl2206%hsl(220, 6%, 60%);
+}
+::-webkit-scrollbar-thumb:hover {
+  width: .6rem;
+  background-color: hsl2206%hsl(220, 6%, 50%);
+}
 /*=============== SCROLL UP ===============*/
 
 /* Show Scroll Up */
