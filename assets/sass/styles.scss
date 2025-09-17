@@ -105,11 +105,36 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-
+.dark-theme {
+  --title-color: hsl(220, 8%, 90%);
+  --text-color: hsl(220, 8%, 70%);
+  --body-color: hsl(220, 8%, 8%);
+  --container-color: hsl(220, 8%, 12%);
+  --opacity-color-30: hsla(0, 0%, 15%, 0.3);
+  --opacity-color-20: hsla(0, 0%, 15%, 0.2);
+}
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme .bg-header .nav__logo img {
+  filter: initial;
+}
+
+.dark-theme .bg-header {
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.4);
+}
+
+.dark-theme .scrollup {
+  background-color: var(--container-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(220, 6%, 15%);
+}
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 6%, 40%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -588,8 +613,8 @@ img {
     background-color: var(--container-color);
     color: var(--text-color);
     padding: 1.5rem 1rem;
-    border-radius: .5rem;
-    transition: background-color .4s;
+    border-radius: 0.5rem;
+    transition: background-color 0.4s;
   }
 
   &__button {
@@ -616,7 +641,7 @@ img {
   &__logo {
     display: inline-flex;
     align-items: center;
-    column-gap: .25rem;
+    column-gap: 0.25rem;
     justify-self: flex-start;
     color: var(--white-color);
     font-size: var(--h3-font-size);
@@ -636,7 +661,7 @@ img {
 
   &__links {
     display: grid;
-    row-gap: .75rem;
+    row-gap: 0.75rem;
   }
 
   &__link {
@@ -651,11 +676,11 @@ img {
   &__social-link {
     color: var(--white-color);
     font-size: 1.5rem;
-    transition: transform .4s;
+    transition: transform 0.4s;
   }
 
   &__social-link:hover {
-    transform: translateY(-.25rem)
+    transform: translateY(-0.25rem);
   }
 
   &__copy {
@@ -668,7 +693,7 @@ img {
 }
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: .6rem;
+  width: 0.6rem;
   background-color: hls(220, 6%, 80%);
 }
 
@@ -685,18 +710,18 @@ img {
   right: 1rem;
   bottom: -50%;
   background-color: var(--body-color);
-  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
   color: var(--title-color);
   display: inline-flex;
   padding: 6px;
   font-size: 1.25rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s, background-color .4s;
+  transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
 }
 
 .scrollup:hover {
-  transform: translateY(-.5rem);
+  transform: translateY(-0.5rem);
 }
 /* Show Scroll Up */
 .show-scroll {
