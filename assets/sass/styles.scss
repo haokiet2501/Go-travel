@@ -243,16 +243,16 @@ img {
 
 /* Change background header */
 .bg-header {
-    background-color: var(--body-color);
-    box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
+  background-color: var(--body-color);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
 }
 
 .bg-header :is(.nav__logo, .nav__theme, .nav__toggle) {
-    color: var(--title-color);
+  color: var(--title-color);
 }
 
 .bg-header .nav__logo img {
-    filter: invert(100%)
+  filter: invert(100%);
 }
 /* Active link */
 
@@ -335,7 +335,7 @@ img {
     }
 
     .swiper-button-next {
-        right: 1.25rem;
+      right: 1.25rem;
     }
   }
 }
@@ -370,67 +370,143 @@ img {
 
 /*=============== DESTINATION ===============*/
 .destination {
-    &__container {
-        grid-template-columns: 300px;
-        justify-content: center;
+  &__container {
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    transition: transform 0.4s;
+  }
+
+  &__data {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--opacity-color-30);
+    backdrop-filter: blur(24px);
+    color: var(--white-color);
+    display: grid;
+    row-gap: 0.25rem;
+    border-radius: 1.5rem;
+    transition: background-color 0.4s;
+  }
+
+  &__subtitle {
+    font-style: var(--h2-font-size);
+    font-family: var(--second-font);
+  }
+
+  &__title {
+    font-style: var(--h1-font-size);
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+
+    i {
+      font-style: 1rem;
     }
 
-    &__card {
-        position: relative;
-        border-radius: 1.5rem;
-        overflow: hidden;
+    span {
+      font-style: var(--small-font-size);
     }
+  }
 
-    &__img {
-        transition: transform .4s;
-    }
-
-    &__data {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 1.5rem;
-        background-color: var(--opacity-color-30);
-        backdrop-filter: blur(24px);
-        color: var(--white-color);
-        display: grid;
-        row-gap: .25rem;
-        border-radius: 1.5rem;
-        transition: background-color .4s;
-    }
-
-    &__subtitle {
-        font-style: var(--h2-font-size);
-        font-family: var(--second-font);
-    }
-
-    &__title {
-        font-style: var(--h1-font-size);
-    }
-
-    &__country {
-        display: flex;
-        align-items: center;
-        column-gap: .25rem;
-
-        i {
-            font-style: 1rem;
-        }
-
-        span {
-            font-style: var(--small-font-size);
-        }
-    }
-
-    &__card:hover &__img {
-        transform: scale(1.2);
-    }
+  &__card:hover &__img {
+    transform: scale(1.2);
+  }
 }
 /*=============== TESTIMONIAL ===============*/
+.testimonial {
+  &__container {
+    justify-content: center;
+    gap: 0;
+  }
 
+  &__img {
+    width: 300px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  &__swiper {
+    max-width: 300px;
+    background-color: var(--container-color);
+    border-radius: 0 0 1.5rem 1.5rem;
+    margin-inline: initial;
+    transition: background-color 0.4s;
+  }
+
+  &__card {
+    padding: 2.5rem 2rem 3rem 1.25rem;
+  }
+
+  &__title {
+    font-style: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: .75rem;
+  }
+
+  &__description {
+    margin-bottom: 1.5rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    img {
+      width: 60px;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    h3 {
+      font-style: var(--normal-font-size);
+      color: var(--title-color);
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-style: var(--small-font-size);
+    }
+  }
+}
 /* Swiper class */
+.testimonial__swiper .swiper-button-prev::after,
+.testimonial__swiper .swiper-button-next::after {
+  content: "";
+}
 
+.testimonial {
+  &__swiper :is(.swiper-button-prev, .swiper-button-next) {
+    color: var(--title-color);
+    font-size: 1.5rem;
+    top: initial;
+    bottom: 1.2rem;
+  }
+
+  &__swiper .swiper-button-prev {
+    left: initial;
+    right: 3.5rem;
+  }
+
+  &__swiper .swiper-button-next {
+    right: 1.25rem;
+  }
+}  
 /*=============== GALLERY ===============*/
 
 /*=============== JOIN ===============*/

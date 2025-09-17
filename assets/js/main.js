@@ -26,6 +26,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 const swiperHome = new Swiper(".home__swiper", {
   loop: true,
   slidesPerView: "auto",
+  grabCursor: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -45,7 +46,20 @@ const changeHeader = () => {
 
 window.addEventListener("scroll", changeHeader);
 /*=============== SWIPER TESTIMONIAL ===============*/
-
+const swiperTestimonial = new Swiper(".testimonial__swiper", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 48,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: false,
+  //   }
+});
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
