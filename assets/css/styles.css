@@ -154,6 +154,10 @@ img {
   margin-bottom: 2rem;
 }
 
+.main {
+  overflow: hidden;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
